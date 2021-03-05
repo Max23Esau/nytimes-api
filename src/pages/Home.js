@@ -1,14 +1,23 @@
-const Home = () => {
+import obtenerDatos from '../../server/obtenerDatos';
+
+const Home = async () => {
+  const books = await obtenerDatos();
+  console.log(books);
   const view = `
-    <div class="Characters">
-      <article class="Character-item">
-        <a href="#/1/">
-          <img src="image" alt="name">
-          <h2>Name</h2>
-        </a>
-      </article>
+    <div class="Header-main">
+    ${books
+      .map(
+        (element) =>
+          `<article class="card-book">
+          <img src=${element.book_image} alt=${element.title}>
+          <h1>${element.author}</h1>
+          <p>${element.description}</p>
+      </article>`
+      )
+      .join('')}
     </div>
   `;
+
   return view;
 };
 
