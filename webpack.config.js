@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+// const CopyWebpackPluguin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -20,6 +21,19 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|gif|jpg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { name: 'assets/[hash].[ext]' },
+          },
+        ],
+      },
     ],
   },
   node: {
@@ -34,5 +48,8 @@ module.exports = {
     new Dotenv({
       path: '.env',
     }),
+    // new CopyWebpackPluguin({
+    //   patterns: [{ from: './src/styles/style.css', to: '' }],
+    // }),
   ],
 };

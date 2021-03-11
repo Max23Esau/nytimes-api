@@ -1,28 +1,21 @@
-import obtenerDatos from '../../server/obtenerDatos';
+import Logo from '../resources/the-new-york-times-logo.png';
 
 const Header = async () => {
-  const books = await obtenerDatos();
-  console.log(books);
-  // const view = `
-  //   <div class="Header-main">
-  //   <h1>${element.title}</h1>
-  //   ${books.forEach(
-  //     (element) =>
-  //       `<article class="Character-item">
-  //       <img src=${element.book_image} alt=${element.title}>
-  //       <h2>${element.author}</h2>
-  //       <p>${element.description}</p>
-  //       <p>${element.rank}</p>
-  //     </article>`
-  //   )}
-  //   </div>
-  // `;
+  const view = `
+    <a href="/">
+      <figure>
+        <img src=${Logo} alt='Logo' class='logo'/>
+      </figure>
+    </a>
+    <nav class="menu">
+      <ul>
+        <li class="item"><a href="#/movies/">Movies</a></li>
+        <li class="item"><a href="/">Books</a></li>
+      </ul>
+    </nav>
+  `;
 
-  // const container = document.getElementById('header');
-
-  // const fragment = document.createDocumentFragment();
-
-  // return view;
+  return view;
 };
 
 export default Header;

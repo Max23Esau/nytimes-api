@@ -4,7 +4,7 @@
   "description": "single page application",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --modo production",
+    "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development"
   },
   "keywords": [
@@ -15,17 +15,18 @@
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "babel-loader": "^8.0.6",
+    "css-loader": "^5.1.1",
     "dotenv-webpack": "^6.0.4",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^2.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "node-fetch": "^2.6.1"
+    "copy-webpack-plugin": "^6.3.2",
+    "node-fetch": "^2.6.1",
+    "vanilla-router": "^1.2.8"
   }
 }
