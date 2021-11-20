@@ -16,7 +16,15 @@ const getBooks = async () => {
       });
     }
 
-    return arrayBooks;
+    let booksMap = arrayBooks.map((item) => {
+      return [item.title, item];
+    });
+
+    var booksMapArr = new Map(booksMap);
+
+    let arrayFilteredBooks = [...booksMapArr.values()];
+
+    return arrayFilteredBooks;
   } catch (error) {
     console.log(error);
   }

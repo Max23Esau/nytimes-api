@@ -2,7 +2,6 @@ import getMovies from '../../server/getMovies';
 
 const Movies = async () => {
   const movies = await getMovies();
-  console.log(movies);
   const view = `
   <div class="content-title">
     <h1>New York Times Movie Reviews</h1>

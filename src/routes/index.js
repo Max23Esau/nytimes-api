@@ -1,6 +1,7 @@
 import Header from '../templates/Header';
 import Home from '../pages/Home';
 import Movies from '../pages/Movies';
+import Articles from '../pages/Articles';
 import Error404 from '../pages/Error404';
 import resolveRoutes from '../utils/resolveRoutes';
 import getPathname from '../utils/getPathname';
@@ -9,6 +10,7 @@ import getPathname from '../utils/getPathname';
 const routes = {
   '/': Home,
   '/movies': Movies,
+  '/articles': Articles,
 };
 
 //ROUTER
