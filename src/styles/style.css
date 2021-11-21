@@ -103,11 +103,17 @@ h2 {
   height: 25em;
 }
 .card-movie {
-  max-width: 500px;
+  max-width: 400px;
 }
-.card-movie img {
+.card-movie img, .card-stories img {
   width: 100%;
   height: 20em;
+}
+.card-stories {
+  max-width: 350px;
+}
+.card-article {
+  max-width: 320px;
 }
 .card-links a img.apple {
   height: 92px;

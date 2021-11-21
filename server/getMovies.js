@@ -6,7 +6,7 @@ const getMovies = async () => {
     const url = `https://api.nytimes.com/svc/movies/v2/reviews/picks.json?api-key=${key}`;
     const res = await fetch(url);
     const data = await res.json();
-
+    console.log(data);
     let moviesMap = data.results.map((item) => {
       return [item.headline, item];
     });

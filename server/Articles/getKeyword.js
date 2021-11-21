@@ -1,9 +1,9 @@
 function getKeyword() {
   let form = document.forms['myForm'];
   console.log(form);
-  let word = form.articles.value;
-  console.log(word);
-  return word;
+  // let word = form.articles.value;
+  // console.log(word);
+  return form;
 }
-
-export default getKeyword;
+// getKeyword()
+// export default getKeyword;
